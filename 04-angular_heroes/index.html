@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>List of Heroes - 04: AngularJS</title>
+  </head>
+  <body ng-app="heroes">
+    <h1>List of Heroes</h1>
+    <p>
+      The following is a complete selection of <i>all known heroes</i> and their superpowers:
+    </p>
+    <table ng-controller="herotable as vm" border="1" cellpadding="10">
+      <thead>
+        <th>Hero</th>
+        <th>Power</th>
+      </thead>
+      <tr ng-repeat="hero in vm.heroes">
+        <td>
+          {{ hero.name }}
+        </td>
+        <td>
+          {{ hero.power }}
+        </td>
+      </tr>
+    </table>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js" type="text/javascript"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+  </body>
+</html>

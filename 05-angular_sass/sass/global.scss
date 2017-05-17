@@ -1,0 +1,63 @@
+// Typography
+$font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// Colours
+$fg-color: rgb(255,0,0);
+$bg-color: rgb(240,240,240);
+$text-color: rgb(0,0,200);
+$line-color: rgba(0,0,0,0.2);
+
+// Border mixin
+@mixin border($position){
+  @if $position == top {
+    border-top: 1px solid $line-color;
+  }
+  @if $position == right {
+    border-right: 1px solid $line-color;
+  }
+  @if $position == bottom {
+    border-bottom: 1px solid $line-color;
+  }
+  @if $position == left {
+    border-left: 1px solid $line-color;
+  }
+}
+
+// Actual styling
+
+body {
+  background-color: $bg-color;
+}
+
+h1 {
+  padding-bottom: 20px;
+  font-family: $font;
+  color: $fg-color;
+  @include border(bottom);
+}
+
+p {
+  font-family: $font;
+  color: $text-color;
+}
+
+.herotable {
+  font-family: $font;
+  th {
+    color: $fg-color;
+  }
+  thead {
+    @include border(bottom);
+  }
+  tr:nth-child(odd) td{
+    background-color: rgb(255,255,255);
+  }
+  th, td {
+    padding: 10px;
+    color: $text-color;
+    text-align: left;
+    &:first-of-type {
+      @include border(right);
+    }
+  }
+}

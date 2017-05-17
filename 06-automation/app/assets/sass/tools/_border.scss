@@ -1,0 +1,15 @@
+// Border mixin
+@mixin border($position){
+  @if $position == top {
+    border-top: 1px solid $line-color;
+  }
+  @if $position == right {
+    border-right: 1px solid $line-color;
+  }
+  @if $position == bottom {
+    border-bottom: 1px solid $line-color;
+  }
+  @if $position == left {
+    border-left: 1px solid $line-color;
+  }
+}

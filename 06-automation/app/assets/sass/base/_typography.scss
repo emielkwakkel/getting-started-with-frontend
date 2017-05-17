@@ -1,0 +1,15 @@
+body {
+  background-color: $bg-color;
+}
+
+h1 {
+  padding-bottom: 20px;
+  font-family: $font;
+  color: $fg-color;
+  @include border(bottom);
+}
+
+p {
+  font-family: $font;
+  color: $text-color;
+}
